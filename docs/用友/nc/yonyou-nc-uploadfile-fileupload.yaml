@@ -28,7 +28,7 @@ http:
         Upgrade-Insecure-Requests: 1
 
         ------WebKitFormBoundaryoDIsCqVMmF83ptmp
-        Content-Disposition: form-data; name="file"; filename="{{randstr}}.txt"
+        Content-Disposition: form-data; name="file"; filename="notnotnotnotnotnoteme.txt"
         Content-Type: application/octet-stream
 
         {{randstr}}
@@ -39,7 +39,7 @@ http:
         ------WebKitFormBoundaryoDIsCqVMmF83ptmp--
 
       - |
-        GET /mp/uploadFileDir/{{randstr}}.txt HTTP/1.1
+        GET /mp/uploadFileDir/notnotnotnotnotnoteme.txt HTTP/1.1
         Host: {{Hostname}}
         User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko)Chrome/115.0.0.0 Safari/537.36
 

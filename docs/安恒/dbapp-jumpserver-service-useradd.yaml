@@ -120,11 +120,13 @@ http:
         </param>
         </params>
         </methodCall>
-
+    matchers-condition: and
     matchers:
       - type: dsl
         dsl:
-          - 'status_code == 200'
           - 'contains(body, "uname")'
           - 'contains(body, "USER_EXISTS")'
         condition: or
+      - type: status
+        status:
+          - 200

